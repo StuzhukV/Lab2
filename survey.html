@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Опитування</title>
+    <script>
+        function submitForm(event) {
+            event.preventDefault(); 
+
+            alert('Дякую за відповідь!');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Ласкаво просимо до Магазину комп'ютерів</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="survey.html">Опитування</a></li>
+                <li><a href="news.html">Новини</a></li>
+                <li><a href="components.html">Комплектуючі</a></li>
+                <li><a href="personal_cabinet.html">Особистий кабінет</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Опитування</h2>
+            <form action="submit_survey.php" method="post" onsubmit="submitForm(event)">
+                <label>Яких товарів ви б хотіли бачити більше в нашому магазині? (Виберіть кілька варіантів)</label>
+                
+                <div>
+                    <input type="checkbox" id="laptops" name="products[]" value="laptops">
+                    <label for="laptops">Ноутбуки</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="desktops" name="products[]" value="desktops">
+                    <label for="desktops">Комп'ютери</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="components" name="products[]" value="components">
+                    <label for="components">Комплектуючі</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="peripherals" name="products[]" value="peripherals">
+                    <label for="peripherals">Периферійні пристрої</label>
+                </div>
+
+
+                <button type="submit">Відправити</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Магазин комп'ютерів. Всі права захищені.</p>
+    </footer>
+</body>
+</html>
